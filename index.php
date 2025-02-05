@@ -13,7 +13,7 @@ if (!isset($_SESSION["usuarios"])){ //Verificação se o array de usuarios foi c
         'senha'=>'1234',
         'endereco' => 'rua teste',
         'uf' => 'MG',
-        'doc' => '11111',
+        'doc' => '1111',
         'sexo' => 'feminino'
         ]
 
@@ -29,7 +29,7 @@ function cadastro($nome, $email, $senha, $endereco, $uf, $doc, $sexo){
 
     foreach ($_SESSION['usuarios'] as $usuario){
 
-        if ($usuario['email'] === $email || $usuario['doc'] === $doc){ // verificação se o email e o documento já existem
+        if ($usuario['email'] === $email && $usuario['doc'] === $doc){ // verificação se o email e o documento já existem
         
         return false;  // se o retorno for false siginifica que já existe  
 
@@ -185,6 +185,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
         <label for="uf">UF:</label>
         <select name="uf" id="uf" required>
 
+                <option value="selecao">Selecione</option>
                 <option value="acre">AC</option>
                 <option value="alagoas">AL</option>
                 <option value="amapa">AP</option>
@@ -225,8 +226,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
 
         </select>
 
-        <label for="doc">Documento:</label>
-        <select name="doc" id="doc" required>
+        <label for="documento">Documento:</label>
+        <select name="documento" id="documento" required>
 
             <option value="selecione">Selecione</option>
             <option value="rg">RG</option>
@@ -235,7 +236,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
 
         </select>
 
-        <input type="text" id="doc" name="Documento" placeholder="Nº Documento" required>
+        <input type="text" id="doc" name="doc" placeholder="Nº Documento" required>
         
         
 
