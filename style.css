@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.cadastro-container{
+
+    padding: 20px ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(223, 19, 19, 0);
+    width: 300px;  
+
+}
+
+h1{
+
+margin-bottom: 20px;
+color: rgb(252, 255, 254);
+background-color: rgb(51, 49, 49);
+
+}
+
+a{
+    color: #007bff;
+    text-decoration: none;
+}
+ 
+a:hover{
+    text-decoration: underline;
+}
+.text-container{
+    margin-bottom: 20px;
+
+}
+
+input{
+    width: 70%;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 2px;
+    
+}
+
+label{
+
+    width: 100%;
+}
+
+select{
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 2px;
+    
+
+}
+.caixa-formulario{
+
+
+    background-color: #86e3ff;
+
+
+}
+
+
+
+
+
