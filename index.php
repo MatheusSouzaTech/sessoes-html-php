@@ -48,7 +48,7 @@ function cadastro($nome, $email, $senha, $endereco, $uf, $doc, $sexo){
         'senha' => $senha,
         'endereco' => $endereco,
         'uf' => $uf,
-        'documento' => $doc,
+        'doc' => $doc,
         'sexo' => $sexo
 
     ];
@@ -166,21 +166,21 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
 
 
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Nome">
+        <input type="text" name="nome" placeholder="Nome">
 
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="E-mail">
+        <input type="email" name="email"  placeholder="E-mail">
 
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <input type="password" name="senha" placeholder="Senha">
 
 
         <label for="endereco">Endereço</label>
-        <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+        <input type="text" name="endereco" placeholder="Endereço">
 
         <label for="telefone">Telefone</label>
-        <input type="text" id="telefone" name="telefone" placeholder="Telefone">
+        <input type="text" name="telefone" placeholder="Telefone">
 
         <label for="uf">UF:</label>
         <select name="uf" id="uf" required>
@@ -227,7 +227,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
         </select>
 
         <label for="documento">Documento:</label>
-        <select name="documento" id="documento" required>
+        <select name="documento" required>
 
             <option value="selecione">Selecione</option>
             <option value="rg">RG</option>
@@ -236,7 +236,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
 
         </select>
 
-        <input type="text" id="doc" name="doc" placeholder="Nº Documento" required>
+        <input type="document" name="doc" placeholder="Nº Documento" required>
         
         
 
@@ -256,11 +256,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastro'])){
     <form method="post">
 
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="E-mail">
+        <input type="email" name="email"  placeholder="E-mail">
 
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" name="senha" placeholder="Senha">
+        <input type="password" name="senha" placeholder="Senha">
 
         <button type="submit" name="login">Entrar</button>
 
